@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	/* border: solid; */
 }
 .header {
 	display: flex;
@@ -10,11 +11,11 @@
 	align-items: center;
 	height: 15vh;
 	width: 100%;
-	background-color: #dce9f0;
+	background-color: white;
 }
 
 #image-icon {
-	height: 7vw;
+	height: 13vw;
 }
 
 .links {
@@ -23,8 +24,37 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 90vw;
-	font-size: 1.7em;
+	font-size: 1.3em;
 }
+
+.links :nth-child(1) {
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-link-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 15vw;
+	height: 13vh;
+	/* border: solid; */
+	contain: content;
+}
+
+#nav-icon {
+	width: 4vw;
+}
+
+/* .divider {
+	width: 100vw;
+	border: solid;
+	border-width: 0.1vh;
+	margin-top: 5px;
+	padding-top: 0.1vh;
+	background-color: #eff3f6;
+} */
 
 a {
 	list-style: none;
@@ -35,15 +65,64 @@ a {
 body {
 	background-color: white;
 }
+/* #FFEBD0 
+#F9E6D3
+#fba92c
+#6d466b
+#ffb043
+#17616e*/
 
 .home-page {
 	display: flex;
-	flex-direction: row;
-	margin-top: 2vh;
+	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	margin-top: 2vh;
 }
 
-.home-page-left {
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20vh;
+}
+
+.platform-container,
+.studio-container {
+	width: 45vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.platform-icon {
+	width: 5vw;
+	height: 9vh;
+	margin-top: 20px;
+}
+
+.studio-icon {
+	width: 8vw;
+	height: 10vh;
+}
+
+#downButtonNav {
+	text-align: center;
+	z-index: 1;
+}
+
+#downButton {
+	height: 4vh;
+	width: 2vw;
+	position: fixed;
+	cursor: pointer;
+}
+
+.home-page-text {
 	border-color: red;
 	border: solid;
 	display: flex;
@@ -51,22 +130,35 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 49.5vw;
-	height: 80vh;
-	background-color: #dce9f0;
+	width: 49vw;
+	height: 90vh;
+	background-color: #ffebd0;
+	font-size: 2vw;
+	font-family: monospace;
 }
 
-.home-page-right {
+.home-page-image {
 	border-color: blue;
 	border: solid;
 	border-width: 2px;
-	width: 49.5vw;
-	height: 80vh;
-	background-image: url(https://media.rawg.io/media/games/bf7/bf73b105ccbba42107986bbcd96fcada.jpg);
+	width: 49vw;
+	height: 90vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	contain: content;
+}
+
+.container:nth-child(1) .home-page-image {
+	background-image: url(https://media.rawg.io/media/games/bf7/bf73b105ccbba42107986bbcd96fcada.jpg);
+}
+
+.container:nth-child(2) .home-page-image {
+	background-image: url(https://media.rawg.io/media/games/7df/7dfbdcb58a03fcddc68479454fc1f7de.jpg);
+}
+
+.container:nth-child(3) .home-page-image {
+	background-image: url(https://media.rawg.io/media/games/5ec/5ecac5cb026ec26a56efcc546364e348.jpg);
 }
 
 .modal {
@@ -89,7 +181,7 @@ body {
 .modal h1 {
 	color: white;
 	opacity: 1;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 }
 
 .game-catalog-container {
@@ -125,8 +217,8 @@ body {
 }
 
 .game-image {
-	min-height: 25vh;
-	min-width: 25vw;
+	min-height: 17vh;
+	min-width: 17vw;
 }
 
 .genres-list {
@@ -149,191 +241,3 @@ body {
 	height: 80vh;
 	width: 20vw;
 }
-
-/* @import url('https://fonts.googleapis.com/css?family=Lobster');
-
-body {
-    background-color: #89FAD0;
-    font-family: 'Lobster';
-}
-
-#carousel {
-    position: absolute;
-    height: 200px;
-    width: 810px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.arrow {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    text-align: center;
-    font-size: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    color: #228291;
-    line-height: 30px;
-    margin-top: 85px;
-    z-index: 1000;
-}
-
-.arrow-right {
-    left: 780px;
-}
-
-.item {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    position: absolute;
-    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
-}
-
-$level2-height: 150px;
-$level2-width: 110px;
-$level1-height: 180px;
-$level1-width: 130px;
-$level0-height: 200px;
-$level0-width: 150px;
-
-$level-2-left: 650px;
-$level-1-left: 500px;
-$level0-left: 330px;
-$level1-left: 180px;
-$level2-left: 50px;
-
-
-.level-2 {
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    background-color: #228291;
-    left: $level-2-left;
-    margin-top: 25px;
-}
-
-.level-1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796E5;
-    left: $level-1-left;
-    margin-top: 10px;
-}
-
-.level0 {
-    height: $level0-height;
-    width: $level0-width;
-    line-height: $level0-height;
-    background-color: #4EC9E1;
-    left: $level0-left;
-}
-
-.level1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796E5;
-    margin-top: 10px;
-    left: $level1-left;
-}
-
-.level2 {
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    background-color: #228291;
-    margin-top: 25px;
-    left: $level2-left;
-}
-
-.left-enter {
-    opacity: 0;
-    left: $level2-left - $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-}
-
-.left-enter.left-enter-active {
-    opacity: 1;
-    left: $level2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.left-leave {
-    opacity: 1;
-    left: $level-2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-}
-
-.left-leave.left-leave-active {
-    left: $level-2-left + $level2-width + 20;
-    opacity: 0;
-    height: $level2-height - 30;
-    line-height: 120px;
-    margin-top: 40px;
-    width: $level2-width - 20;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.right-enter {
-    opacity: 0;
-    left: $level-2-left + $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-}
-
-.right-enter.right-enter-active {
-    left: $level-2-left;
-    opacity: 1;
-    height: $level2-height;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.right-leave {
-    left: $level2-left;
-    height: $level2-height;
-    opacity: 1;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-}
-
-.right-leave.right-leave-active {
-    left: $level2-left - $level2-width;
-    opacity: 0;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.noselect {
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none;  
-            user-select: none;
-} */

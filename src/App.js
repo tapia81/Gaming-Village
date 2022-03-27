@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import localData from './services/savedData';
 import Games from './pages/Games';
-import DetailedGameInfo from './components/DetailedGameInfo';
+// import DetailedGameInfo from './components/DetailedGameInfo';
 import Genres from './pages/Genres';
 import Search from './pages/Search';
 import CreatorsFavorites from './pages/CreatorsFavorites';

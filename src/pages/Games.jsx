@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
+// import { useParams } from 'react-router';
+// import { NavLink } from 'react-router-dom';
 
 const Games = (props) => {
 	const [ currentGameImage, setCurrentGameImage ] = useState([]);
@@ -12,28 +12,28 @@ const Games = (props) => {
 		});
 	};
 
-	const handleFilterChange = (event) => {
-		event.preventDefault();
-		console.log('hey');
-	};
+	// const handleFilterChange = (event) => {
+	// 	event.preventDefault();
+	// 	console.log('hey');
+	// };
 
 	return (
 		<div className="game-catalog-container">
 			{props.gamePageData.map((data, index) => {
 				const { name, rating, background_image, slug } = data;
 				return (
-					<NavLink to="/detailedGameInfo" key={index}>
-						<div
-							className="game-catalog"
-							onChange={(e) => handleFilterChange(e)}
-							style={{ backgroundImage: `url(${background_image})` }}
-						>
-							<div className="modal">
-								<h1>{name}</h1>
-								<h1>Rating: {rating}</h1>
-							</div>
+					// <NavLink to="/detailedGameInfo" key={index}>
+					<div
+						className="game-catalog"
+						// onChange={(e) => handleFilterChange(e)}
+						style={{ backgroundImage: `url(${background_image})` }}
+					>
+						<div className="modal">
+							<h1>{name}</h1>
+							<h1>Rating: {rating}</h1>
 						</div>
-					</NavLink>
+					</div>
+					// </NavLink>
 				);
 			})}
 		</div>
