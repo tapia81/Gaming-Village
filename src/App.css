@@ -1,38 +1,339 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 15vh;
+	width: 100%;
+	background-color: #dce9f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#image-icon {
+	height: 7vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 90vw;
+	font-size: 1.7em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+	list-style: none;
+	text-decoration: none;
+	color: black;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+	background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-page {
+	display: flex;
+	flex-direction: row;
+	margin-top: 2vh;
+	justify-content: center;
 }
+
+.home-page-left {
+	border-color: red;
+	border: solid;
+	display: flex;
+	border-width: 2px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 49.5vw;
+	height: 80vh;
+	background-color: #dce9f0;
+}
+
+.home-page-right {
+	border-color: blue;
+	border: solid;
+	border-width: 2px;
+	width: 49.5vw;
+	height: 80vh;
+	background-image: url(https://media.rawg.io/media/games/bf7/bf73b105ccbba42107986bbcd96fcada.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	contain: content;
+}
+
+.modal {
+	width: 49.5vw;
+	height: 80vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.modal:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.modal h1 {
+	color: white;
+	opacity: 1;
+	font-size: 1.5vw;
+}
+
+.game-catalog-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	justify-content: space-evenly;
+	gap: 3vw;
+	background-color: #e0ae52;
+}
+
+.game-catalog-container .modal {
+	height: 30vh;
+	width: 25vw;
+}
+
+.game-catalog {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-color: blue;
+	border: solid;
+	border-width: 2px;
+	width: 20vw;
+	height: 25vh;
+	contain: content;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	contain: content;
+}
+
+.game-image {
+	min-height: 25vh;
+	min-width: 25vw;
+}
+
+.genres-list {
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center; */
+	display: grid;
+	grid-template-columns: 20% 20% 20%;
+	grid-template-rows: 20% 20% 20%;
+	justify-content: center;
+	gap: 20px;
+	list-style: none;
+	margin-top: 20px;
+}
+
+.genre {
+	border: solid;
+	height: 80vh;
+	width: 20vw;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+    background-color: #89FAD0;
+    font-family: 'Lobster';
+}
+
+#carousel {
+    position: absolute;
+    height: 200px;
+    width: 810px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #228291;
+    line-height: 30px;
+    margin-top: 85px;
+    z-index: 1000;
+}
+
+.arrow-right {
+    left: 780px;
+}
+
+.item {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+}
+
+$level2-height: 150px;
+$level2-width: 110px;
+$level1-height: 180px;
+$level1-width: 130px;
+$level0-height: 200px;
+$level0-width: 150px;
+
+$level-2-left: 650px;
+$level-1-left: 500px;
+$level0-left: 330px;
+$level1-left: 180px;
+$level2-left: 50px;
+
+
+.level-2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    left: $level-2-left;
+    margin-top: 25px;
+}
+
+.level-1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    left: $level-1-left;
+    margin-top: 10px;
+}
+
+.level0 {
+    height: $level0-height;
+    width: $level0-width;
+    line-height: $level0-height;
+    background-color: #4EC9E1;
+    left: $level0-left;
+}
+
+.level1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    margin-top: 10px;
+    left: $level1-left;
+}
+
+.level2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    margin-top: 25px;
+    left: $level2-left;
+}
+
+.left-enter {
+    opacity: 0;
+    left: $level2-left - $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+}
+
+.left-enter.left-enter-active {
+    opacity: 1;
+    left: $level2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.left-leave {
+    opacity: 1;
+    left: $level-2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+}
+
+.left-leave.left-leave-active {
+    left: $level-2-left + $level2-width + 20;
+    opacity: 0;
+    height: $level2-height - 30;
+    line-height: 120px;
+    margin-top: 40px;
+    width: $level2-width - 20;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-enter {
+    opacity: 0;
+    left: $level-2-left + $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+}
+
+.right-enter.right-enter-active {
+    left: $level-2-left;
+    opacity: 1;
+    height: $level2-height;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-leave {
+    left: $level2-left;
+    height: $level2-height;
+    opacity: 1;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+}
+
+.right-leave.right-leave-active {
+    left: $level2-left - $level2-width;
+    opacity: 0;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.noselect {
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;  
+            user-select: none;
+} */
