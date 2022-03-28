@@ -15,10 +15,11 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/Games" element={<Games gamePageData={localData.results} />} />
+				<Route path="/Games/*" element={<Games gamePageData={localData.results} />} />
 				<Route path="/Genres" element={<Genres />} />
 				<Route path="/Search" element={<Search />} />
 				<Route path="/CreatorsFavorites" element={<CreatorsFavorites />} />
+				{/* <Route path="/DetailedGameInfo" element={<DetailedGameInfo gamePageData={localData.results} />} /> */}
 			</Routes>
 		</div>
 	);

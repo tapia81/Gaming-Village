@@ -5,18 +5,16 @@ import bandaiSVG from '../assets/bandai-1.svg';
 import rockstarSVG from '../assets/rockstar-games.svg';
 import activisionSVG from '../assets/activision-2.svg';
 const Home = () => {
-	const scrollToRef = useRef();
-
 	return (
 		<div className="home-page">
-			<div className="container" onClick={() => scrollToRef.current.scrollIntoView({ behavior: 'smooth' })}>
+			<div className="container">
 				<div className="home-page-text">
 					<h2>Gaming Village</h2>
 					<p>Learn More About Your Favorite Games</p>
 				</div>
 				<div className="home-page-image" />
 			</div>
-			<div className="container" ref={scrollToRef}>
+			<div className="container">
 				<div className="home-page-image" />
 				<div className="home-page-text">
 					<h2>Gaming Village</h2>
@@ -38,11 +36,6 @@ const Home = () => {
 							src={require('../assets/2993761_social media_steam_icon.png')}
 							alt=""
 						/>
-						{/* <img
-							className="platform-icon"
-							src={require('../assets/4177740_games_gaming_streaming_twitch_icon.png')}
-							alt=""
-						/> */}
 					</div>
 				</div>
 			</div>
