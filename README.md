@@ -19,7 +19,6 @@ a list of games or search for a specific title.
 
 ## API 📝
 - [RAWG Api](https://rawg.io/apidocs)
-- [IGDB Api](https://api-docs.igdb.com/#about) 
 
 ## Features:
 * **How to Navigate**
