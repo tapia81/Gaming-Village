@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
-import { genreData } from '../services/genreData';
-const Genres = () => {
+
+const Genres = (props) => {
 	const [ genre, setGenre ] = useState([]);
-	const [ genreImage, setImageGenre ] = useState([]);
+	const [ genreImage, setImageGenre ] = useState(true);
 
 	const sortGenres = () => {
-		const res = genreData.results.map((data) => {
+		const res = props.gamePageData.results.map((data) => {
 			return data.name;
 		});
-		const result = genreData.results.map((data) => {
+		const result = props.gamePageData.results.map((data) => {
 			return data.image_background;
 		});
 		setGenre(res);
@@ -20,14 +19,14 @@ const Genres = () => {
 		sortGenres();
 	}, []);
 
-	let navigate = useNavigate();
-	function handleClick() {
-		navigate('/genreSpecific');
-	}
-
 	return (
 		<div className="genre-page-catalog">
 			<h1>All Available Genres</h1>
+			<div className="game-catalog-container">
+				{props.gamePageData.results.map((data, index) => {
+					<p key={index}>{data}</p>;
+				})}
+			</div>
 			<ul className="genres-list">
 				{genre.map((name, index) => {
 					return (

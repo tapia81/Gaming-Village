@@ -99,8 +99,8 @@ export default function DetailedGameInfo(props) {
 						<div className="long-data">
 							{props.data.platforms.map((data, index) => {
 								return (
-									<div>
-										<p key={index}>{data.platform.name}</p>
+									<div key={index}>
+										<p>{data.platform.name}</p>
 									</div>
 								);
 							})}
