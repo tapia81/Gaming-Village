@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import sqaureEnixSVG from '../assets/square-enix-1.svg';
 import capcomSVG from '../assets/capcom-logo-1-.svg';
 import bandaiSVG from '../assets/bandai-1.svg';
@@ -10,7 +9,7 @@ const Home = () => {
 			<div className="container">
 				<div className="home-page-text">
 					<h2>Gaming Village</h2>
-					<p>Learn More About Your Favorite Games</p>
+					<p>Get The Details of Your Favorite Games</p>
 				</div>
 				<div className="home-page-image" />
 			</div>
@@ -18,7 +17,7 @@ const Home = () => {
 				<div className="home-page-image" />
 				<div className="home-page-text">
 					<h2>Gaming Village</h2>
-					<p>Check Different Platforms</p>
+					<p>View Different Platforms</p>
 					<div className="platform-container">
 						<img
 							className="platform-icon"
@@ -42,7 +41,7 @@ const Home = () => {
 			<div className="container">
 				<div className="home-page-text">
 					<h2>Gaming Village</h2>
-					<p>Who Created Your Favorite Games</p>
+					<p>Find Who Created Your Favorite Games</p>
 					<div className="studio-container">
 						<img className="studio-icon" src={rockstarSVG} alt="" />
 						<img className="studio-icon" src={capcomSVG} alt="" />

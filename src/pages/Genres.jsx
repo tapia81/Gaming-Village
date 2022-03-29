@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { genreData } from '../services/genreData';
 const Genres = () => {
 	const [ genre, setGenre ] = useState([]);
@@ -19,12 +20,16 @@ const Genres = () => {
 		sortGenres();
 	}, []);
 
+	let navigate = useNavigate();
+	function handleClick() {
+		navigate('/genreSpecific');
+	}
+
 	return (
 		<div className="genre-page-catalog">
 			<h1>All Available Genres</h1>
 			<ul className="genres-list">
 				{genre.map((name, index) => {
-					console.log(name);
 					return (
 						<div className="genre" key={index}>
 							<li>
