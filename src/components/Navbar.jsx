@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logoSVG from '../assets/Screen-Shot-2022-03-21-at-6.25.00-PM.svg';
+import logoSVG from '../assets/gaming-village-icon.svg';
 
 const Navbar = () => {
 	return (
